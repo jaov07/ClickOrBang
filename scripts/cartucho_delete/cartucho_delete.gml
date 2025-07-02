@@ -13,6 +13,8 @@ function cartucho_delete(_index) {
             array_push(novo_cartucho, cartucho[i]);
         }
     }
-
     cartucho = novo_cartucho;
+	//se o botão atira enemy foi clicado, vai passarVez
+	//se o botão atiraMe foi clicado e a bala removida for vermelha, passaVez
+	
 }

@@ -6,8 +6,8 @@
   "name":"obj_corda",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"coisinhas da jolie",
+    "path":"folders/Objects/coisinhas da jolie.yy",
   },
   "parentObjectId":null,
   "persistent":false,

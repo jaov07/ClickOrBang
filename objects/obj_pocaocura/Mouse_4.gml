@@ -3,9 +3,9 @@ with(obj_jolie){
 		vidaJolie += 1
 	}
 	else{
-		show_message("burro pa krl, ja tinha 5 vidas, perdeu perdeu perdeu otario!!!!")	
+		show_debug_message("burro pa krl, ja tinha 5 vidas, perdeu perdeu perdeu otario!!!!")	
 	}
 		
 		
 }
-show_message(string(obj_jolie.vidaJolie))
+show_debug_message(string(obj_jolie.vidaJolie))

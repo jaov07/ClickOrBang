@@ -1,0 +1,1 @@
+vidaSam = 5
