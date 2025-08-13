@@ -1,7 +1,7 @@
 randomize();
 cartucho = [];
 danoArma = 1;
-
+global.ultimo_botao_clicado = noone
 
 // Função pra gerar o cartucho
 function gerarCartucho() {
@@ -12,6 +12,8 @@ function gerarCartucho() {
         var bala = (numero <= 5) ? "vermelha" : "branca";
         array_push(cartucho, bala);
     }
+	
+	
 
     verificarCartucho();
 }
@@ -52,10 +54,6 @@ function cartucho_delete(_index) {
 }
 
 
-function recarregar(){
-
-}
-
 
 // Função pra atirar
 function atirarNaJolie() {
@@ -83,6 +81,7 @@ function atirarNaJolie() {
 		show_debug_message(cartucho);
     }
 
+	passarVez(bala)
     show_debug_message("Vida da Jolie: " + string(obj_jolie.vidaJolie));
 }
 
@@ -113,6 +112,7 @@ function atirarNaSam() {
 		show_debug_message(cartucho);
     }
 
+	passarVez(bala)
     show_debug_message("Vida da Jolie: " + string(obj_Sam.vidaSam));
 }
 	

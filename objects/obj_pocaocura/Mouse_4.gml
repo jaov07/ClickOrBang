@@ -3,7 +3,7 @@ with(obj_jolie){
 		vidaJolie += 1
 	}
 	else{
-		show_debug_message("burro pa krl, ja tinha 5 vidas, perdeu perdeu perdeu otario!!!!")	
+		show_debug_message("perdeu uma poção atoa!")	
 	}
 		
 		

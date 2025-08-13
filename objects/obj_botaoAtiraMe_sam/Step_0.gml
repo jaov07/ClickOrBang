@@ -1,12 +1,7 @@
-
-
-
 if(obj_arma.jogadorAtual = "sam"){
 botao_ativo = true;
-
 }
-
-else{
+if(obj_arma.jogadorAtual == "jolie"){
 	botao_ativo = false
 }
 
@@ -15,6 +10,6 @@ else{
 if (botao_ativo == false){
 	visible = false
 }
-else{
+if(botao_ativo == true){
 	visible = true
 	}

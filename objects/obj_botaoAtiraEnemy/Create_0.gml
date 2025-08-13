@@ -1,5 +1,4 @@
-show_debug_message( obj_arma.jogadorAtual)
-
+botao_ativo = true
 
 
 
