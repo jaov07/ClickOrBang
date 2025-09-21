@@ -1,1 +1,4 @@
-vidaSam = 5
+var resultado = gerarItens();
+itensSam = resultado.itensSam;
+
+vidaSam = 5;

@@ -1,0 +1,1 @@
+global.cordaClicada_jolie = false

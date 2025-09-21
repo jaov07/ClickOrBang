@@ -3,6 +3,9 @@ cartucho = [];
 danoArma = 1;
 global.ultimo_botao_clicado = noone
 
+
+global.itens = ["facao", "vassoura", "corda", "lupa", "maca"];
+
 // Função pra gerar o cartucho
 function gerarCartucho() {
     cartucho = [];
@@ -16,6 +19,26 @@ function gerarCartucho() {
 	
 
     verificarCartucho();
+	
+// SCRIPT DE GERAR ITENS
+	var resultado = gerarItens();
+	show_debug_message("itens jolie: " + string(resultado.itensJolie));
+	show_debug_message("itens sam: " + string(resultado.itensSam));
+	
+	var qtdV = 0;
+    var qtdB = 0;
+    for (var i = 0; i < array_length(cartucho); i++) {
+        if (cartucho[i] == "vermelha") qtdV += 1;
+        else qtdB += 1;
+    }
+
+    var p = instance_create_layer(0, 0, "Instances", obj_popup_balas);
+    p.qtdV = qtdV;
+    p.qtdB = qtdB;
+	
+	
+	
+	
 }
 
 // Função pra garantir que não fique 6 balas iguais
@@ -78,10 +101,18 @@ function atirarNaJolie() {
     } else {
         show_debug_message("🚫 Sem balas! ");
 		gerarCartucho()
+		
 		show_debug_message(cartucho);
     }
-
-	passarVez(bala)
+	
+	
+	
+	if(global.cordaClicada_jolie == false){
+		passarVez(bala)
+	}
+	else{
+			global.cordaClicada_jolie = false
+	}
     show_debug_message("Vida da Jolie: " + string(obj_jolie.vidaJolie));
 }
 
@@ -111,8 +142,13 @@ function atirarNaSam() {
 		gerarCartucho()
 		show_debug_message(cartucho);
     }
-
-	passarVez(bala)
+	if(global.cordaClicada_sam == false){
+		passarVez(bala)
+	}
+	else{
+			global.cordaClicada_sam = false
+	}
+	
     show_debug_message("Vida da Jolie: " + string(obj_Sam.vidaSam));
 }
 	
