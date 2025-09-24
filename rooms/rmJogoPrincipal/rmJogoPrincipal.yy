@@ -36,6 +36,7 @@
     {"name":"inst_4E2BF610","path":"rooms/rmJogoPrincipal/rmJogoPrincipal.yy",},
     {"name":"inst_7D32A01B","path":"rooms/rmJogoPrincipal/rmJogoPrincipal.yy",},
     {"name":"inst_47567911","path":"rooms/rmJogoPrincipal/rmJogoPrincipal.yy",},
+    {"name":"inst_75D8A0D1","path":"rooms/rmJogoPrincipal/rmJogoPrincipal.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -71,6 +72,7 @@
         {"$GMRInstance":"v2","%Name":"inst_3623415A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3623415A","objectId":{"name":"obj_corda_sam","path":"objects/obj_corda_sam/obj_corda_sam.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.53125,"scaleY":0.59375,"x":840.0,"y":29.0,},
         {"$GMRInstance":"v2","%Name":"inst_35DDE0B2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_35DDE0B2","objectId":{"name":"obj_vassoura_sam","path":"objects/obj_vassoura_sam/obj_vassoura_sam.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":-1.671875,"scaleY":1.6875,"x":984.0,"y":-2.5454636,},
         {"$GMRInstance":"v2","%Name":"inst_4E2BF610","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4E2BF610","objectId":{"name":"obj_faca_sam","path":"objects/obj_faca_sam/obj_faca_sam.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.890625,"scaleY":0.9375001,"x":962.0,"y":15.999996,},
+        {"$GMRInstance":"v2","%Name":"inst_75D8A0D1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_75D8A0D1","objectId":{"name":"obj_hudItens","path":"objects/obj_hudItens/obj_hudItens.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":516.0,"y":140.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"Sprite17","path":"sprites/Sprite17/Sprite17.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],

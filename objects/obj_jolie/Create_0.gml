@@ -1,4 +1,5 @@
 var resultado = gerarItens();
-itensJolie = resultado.itensJolie;
+itensJolie = resultado.contJolie;
+
 
 vidaJolie = 5;

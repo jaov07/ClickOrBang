@@ -1,13 +1,15 @@
+
 randomize();
 cartucho = [];
 danoArma = 1;
-global.ultimo_botao_clicado = noone
+
 
 
 global.itens = ["facao", "vassoura", "corda", "lupa", "maca"];
 
 // Função pra gerar o cartucho
 function gerarCartucho() {
+	global.ultimo_botao_clicado = noone
     cartucho = [];
 
     for (var i = 0; i < 6; i++) {
@@ -79,7 +81,9 @@ function cartucho_delete(_index) {
 
 
 // Função pra atirar
-function atirarNaJolie() {
+function atirarNaJolie(ultimobotaoclicado) {
+	show_debug_message("1cordaClicada_sam = " + string(global.cordaClicada_sam));
+	
     var tcartucho = array_length(cartucho);
     var ultimabala = tcartucho - 1;
 
@@ -108,23 +112,25 @@ function atirarNaJolie() {
 	
 	
 	if(global.cordaClicada_jolie == false){
-		passarVez(bala)
+		show_debug_message("2cordaClicada_sam = " + string(global.cordaClicada_sam));
+		passarVez(bala,ultimobotaoclicado)
 	}
 	else{
 			global.cordaClicada_jolie = false
 	}
-    show_debug_message("Vida da Jolie: " + string(obj_jolie.vidaJolie));
+    
 }
 
 
 
-function atirarNaSam() {
+function atirarNaSam(ultimobotaoclicado) {
+	show_debug_message("cordaClicada_sam = " + string(global.cordaClicada_sam));
     var tcartucho = array_length(cartucho);
     var ultimabala = tcartucho - 1;
 
     if (tcartucho > 0) {
         var bala = cartucho[ultimabala];
-
+		show_debug_message("1cordaClicada_jolie = " + string(global.cordaClicada_jolie));
         if (bala == "vermelha") {
            obj_Sam.vidaSam -= danoArma;
             show_debug_message("💥 BANG!");
@@ -143,7 +149,8 @@ function atirarNaSam() {
 		show_debug_message(cartucho);
     }
 	if(global.cordaClicada_sam == false){
-		passarVez(bala)
+		show_debug_message("2cordaClicada_jolie = " + string(global.cordaClicada_jolie));
+		passarVez(bala,ultimobotaoclicado)
 	}
 	else{
 			global.cordaClicada_sam = false

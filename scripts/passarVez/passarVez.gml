@@ -1,47 +1,36 @@
-function passarVez(ultimabala) {
+function passarVez(ultimabala, botaoClicado) {
     show_debug_message("Função passarVez() foi chamada");
-
-    // Função lupa pra pegar a última bala no cartucho
+	
     var balaAtual = ultimabala;
+    var jogadorAtual = obj_arma.jogadorAtual;
+    var proximoJogador = (jogadorAtual == "jolie") ? "sam" : "jolie";
 
-    if (obj_arma.jogadorAtual == "jolie") {
-        if (balaAtual == "vermelha") {
-            // Bala vermelha: passa a vez pra Sam
-            obj_arma.jogadorAtual = "sam";
-            show_debug_message("Bala vermelha! Vez passou para Sam.");
-        } 
-        else if (balaAtual == "branca") {
-            // Bala branca:
-            // Se atirou no inimigo, passa a vez pra Sam
-            if (global.ultimo_botao_clicado == obj_botaoAtiraEnemy.id) {
-                obj_arma.jogadorAtual = "sam";
-                show_debug_message("Bala branca atirando no inimigo! Vez passou para Sam.");
+    // Define os botões de alvo de acordo com o jogador atual
+    var botaoInimigo = (jogadorAtual == "jolie") ? obj_botaoAtiraEnemy : obj_botaoAtiraEnemy_sam;
+    var botaoMe = (jogadorAtual == "jolie") ? obj_botaoAtiraMe : obj_botaoAtiraMe_sam;
+
+    if (balaAtual == "vermelha") {
+        // Bala vermelha: passa a vez sempre para o próximo jogador
+        obj_arma.jogadorAtual = proximoJogador;
+        show_debug_message("Bala vermelha! Vez passou para " + proximoJogador);
+    }
+    else if (balaAtual == "branca") {
+        // Bala branca: só muda a vez se atirou no inimigo
+        if (instance_exists(botaoClicado)) {
+            if (botaoClicado == botaoInimigo) {
+                obj_arma.jogadorAtual = proximoJogador;
+				show_debug_message("botao clicado: " + string( botaoClicado))
+                show_debug_message("Bala branca atirando no inimigo! Vez passou para " + proximoJogador);
             } 
-            else if(global.ultimo_botao_clicado == obj_botaoAtiraMe.id) {
-                // Atirou em si mesmo, vez permanece com Jolie
-                obj_arma.jogadorAtual = "jolie";
-                show_debug_message("Bala branca atirando em si mesmo! Vez permanece com Jolie.");
+            else if (botaoClicado == botaoMe) {
+                obj_arma.jogadorAtual = jogadorAtual;
+				show_debug_message("botao clicado: " + string( botaoClicado))
+                show_debug_message("Bala branca atirando em si mesmo! Vez permanece com " + jogadorAtual);
             }
-        }
-    } 
-    else if (obj_arma.jogadorAtual == "sam") {
-        if (balaAtual == "vermelha") {
-            // Bala vermelha: passa a vez pra Jolie
-            obj_arma.jogadorAtual = "jolie";
-            show_debug_message("Bala vermelha! Vez passou para Jolie.");
         } 
-        else if (balaAtual == "branca") {
-            // Bala branca:
-            // Se atirou no inimigo, passa a vez pra Jolie
-            if (global.ultimo_botao_clicado == obj_botaoAtiraEnemy_sam.id) {
-                obj_arma.jogadorAtual = "jolie";
-                show_debug_message("Bala branca atirando no inimigo! Vez passou para Jolie.");
-            } 
-            else if (global.ultimo_botao_clicado == obj_botaoAtiraMe_sam.id) {
-                // Atirou em si mesmo, vez permanece com Sam
-                obj_arma.jogadorAtual = "sam";
-                show_debug_message("Bala branca atirando em si mesmo! Vez permanece com Sam.");
-            }
+        // Se o botão não existe mais, mantém a vez sem mensagem
+        else {
+            obj_arma.jogadorAtual = jogadorAtual;
         }
     }
 }
