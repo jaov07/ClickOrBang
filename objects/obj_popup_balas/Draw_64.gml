@@ -1,6 +1,8 @@
 var xx = display_get_gui_width() / 2;
 var yy = display_get_gui_height() / 2;
 
+
+
 // fundo
 draw_sprite(spr_popup_fundo, 0, xx, yy);
 

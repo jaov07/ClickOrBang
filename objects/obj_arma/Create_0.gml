@@ -93,6 +93,7 @@ function atirarNaJolie(ultimobotaoclicado) {
         if (bala == "vermelha") {
             obj_jolie.vidaJolie -= danoArma;
             show_debug_message("💥 BANG!");
+			danoArma = 1
 			cartucho_delete(ultimabala);
 			show_debug_message(cartucho)
 		} else {
@@ -134,6 +135,7 @@ function atirarNaSam(ultimobotaoclicado) {
         if (bala == "vermelha") {
            obj_Sam.vidaSam -= danoArma;
             show_debug_message("💥 BANG!");
+			danoArma = 1
 			cartucho_delete(ultimabala);
 			show_debug_message(cartucho)
 		} else {

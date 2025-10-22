@@ -2,7 +2,7 @@
 if(global.contSam[2] >= 1){
 	
     global.contSam[2]--; // diminui a quantidade
-	global.cordaClicada_sam = true
+	global.cordaClicada_jolie = true
 	
 
     // remove uma instância do array de itens

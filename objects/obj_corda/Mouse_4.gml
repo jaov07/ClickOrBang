@@ -4,7 +4,9 @@
 if(global.contJolie[2] >= 1){
 	
     global.contJolie[2]--; // diminui a quantidade
-	global.cordaClicada_jolie = true
+	
+	
+	global.cordaClicada_sam = true
 	
 
     // remove uma instância do array de itens
