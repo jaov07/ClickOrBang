@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"click or bang testes",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -36,10 +36,11 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.1.193",
+    "IDEVersion":"2024.14.1.210",
   },
   "name":"click or bang testes",
   "resources":[
+    {"id":{"name":"ftn_textItem","path":"fonts/ftn_textItem/ftn_textItem.yy",},},
     {"id":{"name":"obj_arma","path":"objects/obj_arma/obj_arma.yy",},},
     {"id":{"name":"obj_botaoAtiraEnemy_sam","path":"objects/obj_botaoAtiraEnemy_sam/obj_botaoAtiraEnemy_sam.yy",},},
     {"id":{"name":"obj_botaoAtiraEnemy","path":"objects/obj_botaoAtiraEnemy/obj_botaoAtiraEnemy.yy",},},
@@ -67,7 +68,10 @@
     {"id":{"name":"obj_pocaocura_sam","path":"objects/obj_pocaocura_sam/obj_pocaocura_sam.yy",},},
     {"id":{"name":"obj_pocaocura","path":"objects/obj_pocaocura/obj_pocaocura.yy",},},
     {"id":{"name":"obj_pocaoopcoes","path":"objects/obj_pocaoopcoes/obj_pocaoopcoes.yy",},},
+    {"id":{"name":"obj_popup_balaBlack","path":"objects/obj_popup_balaBlack/obj_popup_balaBlack.yy",},},
+    {"id":{"name":"obj_popup_balaRed","path":"objects/obj_popup_balaRed/obj_popup_balaRed.yy",},},
     {"id":{"name":"obj_popup_balas","path":"objects/obj_popup_balas/obj_popup_balas.yy",},},
+    {"id":{"name":"obj_popup","path":"objects/obj_popup/obj_popup.yy",},},
     {"id":{"name":"obj_popupdescricao","path":"objects/obj_popupdescricao/obj_popupdescricao.yy",},},
     {"id":{"name":"obj_Sam","path":"objects/obj_Sam/obj_Sam.yy",},},
     {"id":{"name":"obj_spiderpurple","path":"objects/obj_spiderpurple/obj_spiderpurple.yy",},},
@@ -113,6 +117,8 @@
     {"id":{"name":"spr_painelvida","path":"sprites/spr_painelvida/spr_painelvida.yy",},},
     {"id":{"name":"spr_pocaocura","path":"sprites/spr_pocaocura/spr_pocaocura.yy",},},
     {"id":{"name":"spr_popup_fundo","path":"sprites/spr_popup_fundo/spr_popup_fundo.yy",},},
+    {"id":{"name":"spr_popup_red","path":"sprites/spr_popup_red/spr_popup_red.yy",},},
+    {"id":{"name":"spr_popupBlack","path":"sprites/spr_popupBlack/spr_popupBlack.yy",},},
     {"id":{"name":"spr_popupdescricao","path":"sprites/spr_popupdescricao/spr_popupdescricao.yy",},},
     {"id":{"name":"spr_Sam","path":"sprites/spr_Sam/spr_Sam.yy",},},
     {"id":{"name":"spr_samVenceu","path":"sprites/spr_samVenceu/spr_samVenceu.yy",},},

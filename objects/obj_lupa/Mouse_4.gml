@@ -1,19 +1,28 @@
+if (global.contJolie[3] >= 1) {
+	var mx = xx;
+	var my = yy;
 
-if(global.contJolie[3] >= 1){
 	
-	with(obj_arma){
-	tcartucho = array_length(cartucho)
-	ultimabala = cartucho[tcartucho - 1]
-	show_message(ultimabala)
-}
+    with (obj_arma) {
+        var tcartucho = array_length(cartucho);
+        var ultimabala = cartucho[tcartucho - 1];
 
-    global.contJolie[3]--; // diminui a quantidade
+        show_debug_message("ULTIMA BALA: " + string(ultimabala));
 
-    // remove uma instância do array de itens
+        if (ultimabala == "vermelha") {
+            instance_create_layer(mx/2, my/2, "Instances", obj_popup_balaRed);
+        }
+		else{
+			instance_create_layer(mx/2, my/2, "Instances", obj_popup_balaBlack);			
+		}
+    }
+
+    global.contJolie[3]--;
+
     for (var i = 0; i < array_length(global.itensJolie); i++) {
         if (global.itensJolie[i] == "lupa") {
             array_delete(global.itensJolie, i, 1);
-            break; // remove só uma instância
+            break;
         }
     }
 }
